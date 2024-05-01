@@ -1,5 +1,5 @@
 # 複数インスタンステスト用Repo
-Webサーバ：Apacheコンテナ（mltienvwg）
+Webサーバ：Apacheコンテナ（multienvwg）
 
 IRISは3コンテナ
 
@@ -9,7 +9,11 @@ server1|iris1
 server2|iris2
 server3|iris3
 
-## 手動でインスタンス名変えないと動かない
+## 開始手順
+
+※コンテナ初期開始後、手動でインスタンス名変えます！
+
+**コンテナビルド前にiris.keyをgit cloneしたディレクトリに配置します。（ファイル名もiris.key）**
 
 コンテナビルド
 ```
