@@ -1,0 +1,36 @@
+{
+    "objectscript.conn": {
+        "active": true,
+        "ns": "USER",
+        "server": "server1"
+    },
+    "intersystems.servers": {
+        "server1" :{
+            "webServer": {
+                "host": "localhost",
+                "port":8082,
+                "scheme": "http",
+                "pathPrefix": "/iris1"
+            },
+            "username": "SuperUser"
+        },
+        "server2" :{
+            "webServer": {
+                "host": "localhost",
+                "port":8082,
+                "scheme": "http",
+                "pathPrefix": "/iris2"
+            },
+            "username": "SuperUser"
+        },
+        "server3" :{
+            "webServer": {
+                "host": "localhost",
+                "port":8082,
+                "scheme": "http",
+                "pathPrefix": "/iris3"
+            },
+            "username": "SuperUser"
+        },
+    }
+}

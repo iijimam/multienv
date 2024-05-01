@@ -1,0 +1,49 @@
+version: '3.7'
+
+services:
+  iris1:
+    image: multienviris1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: ["51772:1972"]
+    container_name: server1
+    volumes: ["./src:/src"]
+    environment: 
+      - TZ=JST-9
+
+
+  iris2:
+    image: multienviris2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: ["51773:1972"]
+    container_name: server2
+    volumes: ["./src:/src"]
+    environment: 
+      - TZ=JST-9
+
+  iris3:
+    image: multienviris3
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: ["51774:1972"]
+    container_name: server3
+    volumes: ["./src:/src"]
+    environment: 
+      - TZ=JST-9
+
+  webgw:
+    image: containers.intersystems.com/intersystems/webgateway:2024.1
+    container_name: multienvwg
+    init: true
+    ports:
+      - 8082:80
+      - 8453:443
+    environment:
+    - ISC_CSP_CONF_FILE=/webgateway-shared/CSP.conf
+    - ISC_CSP_INI_FILE=/webgateway-shared/CSP.ini
+    volumes:
+    - ./webgateway:/webgateway-shared

@@ -1,0 +1,5 @@
+set $namespace="%SYS"
+//事前定義ユーザのパスワード設定を期限切れにしない
+Do ##class(Security.Users).UnExpireUserPasswords("*")
+//日本語ロケールのインストール
+Do ##class(Config.NLS.Locales).Install("jpuw")
