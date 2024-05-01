@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     ports: ["51772:1972"]
     container_name: server1
-    volumes: ["./src:/src"]
+    volumes: ["./src1:/src1"]
     environment: 
       - TZ=JST-9
 
@@ -20,7 +20,7 @@ services:
       dockerfile: Dockerfile
     ports: ["51773:1972"]
     container_name: server2
-    volumes: ["./src:/src"]
+    volumes: ["./src2:/src2"]
     environment: 
       - TZ=JST-9
 
@@ -31,7 +31,7 @@ services:
       dockerfile: Dockerfile
     ports: ["51774:1972"]
     container_name: server3
-    volumes: ["./src:/src"]
+    volumes: ["./src3:/src3"]
     environment: 
       - TZ=JST-9
 
