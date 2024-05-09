@@ -1,6 +1,6 @@
 #ARG IMAGE=containers.intersystems.com/intersystems/irishealth:2024.1
-ARG IMAGE=containers.intersystems.com/intersystems/iris:2024.1
-
+#ARG IMAGE=containers.intersystems.com/intersystems/iris:2024.1
+ARG IMAGE=irepo.intersystems.com/intersystems/iris:2024.1
 FROM $IMAGE
 
 # ビルド中に実行したいスクリプトがあるファイルをコンテナにコピーしています
